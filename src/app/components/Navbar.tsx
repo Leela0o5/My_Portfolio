@@ -12,6 +12,7 @@ export default function Navbar() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
+    { href: "/skills", label: "Skills" },
     { href: "/projects", label: "Projects" },
     { href: "/contact", label: "Contact" },
   ];
@@ -25,7 +26,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="text-2xl font-bold">
-              <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent font-sans">
                 Leela M
               </span>
             </Link>
@@ -63,7 +64,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               type="button"
               className="inline-flex items-center justify-center p-2 rounded-md text-yellow-400 hover:text-white 
-                         transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500" // 👈 5. Added focus rings
+                         transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -98,7 +99,7 @@ export default function Navbar() {
                             ${
                               isActive
                                 ? "text-yellow-300 hover:text-yellow-400"
-                        : "text-gray-300 hover:text-yellow-400"
+                                : "text-gray-300 hover:text-yellow-400"
                             }`}
               >
                 {isActive ? (
