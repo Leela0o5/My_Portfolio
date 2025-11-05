@@ -44,7 +44,7 @@ export default function HeroSection() {
     <section
       id="home"
       className="container mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl 
-                 items-center justify-center px-5 py-12 md:px-5 sm:px-10"
+                 items-center justify-center px-5 py-12 md:px-5 pt-24"
     >
       <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-2">
         <div className="max-w-xl text-white space-y-6 text-center md:text-left order-last md:order-first">
