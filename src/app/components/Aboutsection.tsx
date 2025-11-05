@@ -17,7 +17,10 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="container mx-auto max-w-7xl px-4 py-12 md:px-8">
+    <section
+      id="about"
+      className="container mx-auto max-w-7xl px-4 py-20 md:px-8"
+    >
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl sm:text-5xl font-bold text-center mb-12">
           About
@@ -99,6 +102,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,27 +1,67 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { usePathname } from "next/navigation";
+const navLinks = [
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
+  const [activeSection, setActiveSection] = useState("home");
+  // const pathname = usePathname();
 
-  const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/projects", label: "Projects" },
-    { href: "/contact", label: "Contact" },
-  ];
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = 100;
+      let currentActive = "";
+
+      const atBottom =
+        window.innerHeight + Math.ceil(window.scrollY) >=
+        document.body.offsetHeight - 2;
+
+      if (atBottom) {
+        currentActive = navLinks[navLinks.length - 1].href.substring(1);
+      } else {
+        for (const link of navLinks) {
+          const id = link.href.substring(1);
+          const section = document.getElementById(id);
+
+          if (section) {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= offset) {
+              currentActive = id;
+            }
+          }
+        }
+      }
+
+      if (currentActive === "" && navLinks.length > 0) {
+        currentActive = navLinks[0].href.substring(1);
+      }
+
+      setActiveSection(currentActive);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <nav
       className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-lg 
                  border-b border-white/10 shadow-lg shadow-yellow-400/20"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="text-2xl font-bold">
@@ -33,7 +73,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navLinks.map((link) => {
-                const isActive = pathname === link.href;
+                const isActive = link.href === `#${activeSection}`;
                 return (
                   <Link
                     key={link.href}
@@ -88,18 +128,18 @@ export default function Navbar() {
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center bg-black/70 backdrop-blur-md">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href;
+            const isActive = link.href === `#${activeSection}`;
             return (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
                 className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 
-                            ${
-                              isActive
-                                ? "text-yellow-300 hover:text-yellow-400"
-                                : "text-gray-300 hover:text-yellow-400"
-                            }`}
+                          ${
+                            isActive
+                              ? "text-yellow-300 hover:text-yellow-400"
+                              : "text-gray-300 hover:text-yellow-400"
+                          }`}
               >
                 {isActive ? (
                   <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent">

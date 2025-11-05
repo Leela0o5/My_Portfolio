@@ -41,9 +41,10 @@ export default function HeroSection() {
   ];
 
   return (
-    <div
+    <section
+      id="home"
       className="container mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl 
-                 items-center justify-center px-4 py-12 md:px-8"
+                 items-center justify-center px-5 py-12 md:px-5 sm:px-10"
     >
       <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-2">
         <div className="max-w-xl text-white space-y-6 text-center md:text-left order-last md:order-first">
@@ -76,7 +77,7 @@ export default function HeroSection() {
 
           <div className="flex space-x-4 justify-center md:justify-start pt-4">
             <Link
-              href="/contact"
+              href="#contact"
               className="rounded-md bg-yellow-400 px-6 py-3 text-sm font-semibold 
                          text-black shadow-sm transition-all duration-300 
                          hover:bg-yellow-300"
@@ -84,7 +85,7 @@ export default function HeroSection() {
               Get in touch
             </Link>
             <Link
-              href="/about"
+              href="#about"
               className="group flex items-center gap-x-2 rounded-md border 
                          border-yellow-400 px-6 py-3 text-sm font-semibold 
                          text-yellow-400 transition-all duration-300 
@@ -113,6 +114,6 @@ export default function HeroSection() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

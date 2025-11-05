@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import { Github, Play } from "lucide-react";
 import Link from "next/link";
@@ -47,87 +47,87 @@ const projectsData = [
   },
 ];
 
-
 export default function ProjectsPage() {
   return (
-    <div className="container mx-auto max-w-7xl px-4 py-12 md:px-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl font-bold text-center mb-12">
-          My
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600 ml-3">
-            Projects
-          </span>
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projectsData.map((project) => (
-            <div
-              key={project.title}
-              className="flex flex-col justify-between h-full 
+    <section
+      id="projects"
+      className="container mx-auto max-w-7xl px-4 py-20 md:px-8"
+    >
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl font-bold text-center mb-12">
+            My
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600 ml-3">
+              Projects
+            </span>
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projectsData.map((project) => (
+              <div
+                key={project.title}
+                className="flex flex-col justify-between h-full 
                          bg-black/50 backdrop-blur-lg 
                          border border-yellow-400/30 
                          rounded-lg shadow-2xl shadow-yellow-400/10
                          p-6 transition-all duration-300
                          hover:border-yellow-400/50 hover:shadow-yellow-400/20"
-            >
-              <div>
-
-                <h2 className="text-2xl font-semibold text-white mb-2">
-                  {project.title}
-                </h2>
-                {project.status && (
-                  <span className="text-xs font-medium text-yellow-400 bg-yellow-400/10 px-2 py-0.5 rounded-full border border-yellow-400/30">
-                    {project.status}
-                  </span>
-                )}
-                <p className="text-gray-300 mt-4 text-sm leading-relaxed">
-                  {project.description}
-                </p>
-              </div>
-
-              <div className="mt-6">
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="bg-gray-700/60 text-gray-300 
-                                 text-xs font-medium px-3 py-1 rounded-full"
-                    >
-                      {tech}
+              >
+                <div>
+                  <h2 className="text-2xl font-semibold text-white mb-2">
+                    {project.title}
+                  </h2>
+                  {project.status && (
+                    <span className="text-xs font-medium text-yellow-400 bg-yellow-400/10 px-2 py-0.5 rounded-full border border-yellow-400/30">
+                      {project.status}
                     </span>
-                  ))}
+                  )}
+                  <p className="text-gray-300 mt-4 text-sm leading-relaxed">
+                    {project.description}
+                  </p>
                 </div>
-                <div className="flex items-center space-x-4">
-                  {project.links.github && (
-                    <a
-                      href={project.links.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-yellow-400 
+
+                <div className="mt-6">
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="bg-gray-700/60 text-gray-300 
+                                 text-xs font-medium px-3 py-1 rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    {project.links.github && (
+                      <a
+                        href={project.links.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-yellow-400 
                                  transition-colors hover:text-yellow-300"
-                    >
-                      <Github className="h-5 w-5" />
-                      <span className="text-sm font-medium">GitHub</span>
-                    </a>
-                  )}
-                  {project.links.demo && (
-                    <a
-                      href={project.links.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-yellow-400 
+                      >
+                        <Github className="h-5 w-5" />
+                        <span className="text-sm font-medium">GitHub</span>
+                      </a>
+                    )}
+                    {project.links.demo && (
+                      <a
+                        href={project.links.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-yellow-400 
                                  transition-colors hover:text-yellow-300"
-                    >
-                      <Play className="h-5 w-5" />
-                      <span className="text-sm font-medium">Demo</span>
-                    </a>
-                  )}
+                      >
+                        <Play className="h-5 w-5" />
+                        <span className="text-sm font-medium">Demo</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </div>
+    </section>
   );
 }
