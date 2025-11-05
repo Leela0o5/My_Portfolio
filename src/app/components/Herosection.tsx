@@ -43,7 +43,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="container mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl 
+      className="container mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl \r\n         
                  items-center justify-center px-5 py-12 md:px-5 pt-24"
     >
       <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-2">
@@ -78,18 +78,13 @@ export default function HeroSection() {
           <div className="flex space-x-4 justify-center md:justify-start pt-4">
             <Link
               href="#contact"
-              className="rounded-md bg-yellow-400 px-6 py-3 text-sm font-semibold 
-                         text-black shadow-sm transition-all duration-300 
-                         hover:bg-yellow-300"
+              className="rounded-md bg-yellow-400 px-6 py-3 text-sm font-semibold text-black shadow-sm transition-all duration-300 hover:bg-yellow-300"
             >
               Get in touch
             </Link>
             <Link
               href="#about"
-              className="group flex items-center gap-x-2 rounded-md border 
-                         border-yellow-400 px-6 py-3 text-sm font-semibold 
-                         text-yellow-400 transition-all duration-300 
-                         hover:bg-yellow-400/10"
+              className="group flex items-center gap-x-2 rounded-md border border-yellow-400 px-6 py-3 text-sm font-semibold text-yellow-400 transition-all duration-300 hover:bg-yellow-400/10"
             >
               Learn more
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -101,13 +96,7 @@ export default function HeroSection() {
           <Image
             src="/pic.jpeg"
             alt="Leela M"
-            className="object-cover 
-                       w-full 
-                       max-w-[18rem] 
-                       sm:max-w-sm 
-                       aspect-square 
-                       rounded-full border-4 border-yellow-400 
-                       shadow-2xl shadow-yellow-400/20"
+            className="object-cover w-full max-w-[18rem] sm:max-w-sm aspect-square rounded-full border-4 border-yellow-400 shadow-2xl shadow-yellow-400/20"
             width={400}
             height={400}
             priority

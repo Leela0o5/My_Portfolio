@@ -47,20 +47,20 @@ export default function Navbar() {
       setActiveSection(currentActive);
     };
 
-    handleScroll();
+    const timerId = setTimeout(() => {
+      handleScroll();
+    }, 100);
 
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timerId);
     };
   }, []);
 
   return (
-    <nav
-      className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-lg 
-                 border-b border-white/10 shadow-lg shadow-yellow-400/20"
-    >
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-lg border-b border-white/10 shadow-lg shadow-yellow-400/20">
       <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
@@ -102,8 +102,7 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-yellow-400 hover:text-white 
-                         transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-yellow-400 hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
