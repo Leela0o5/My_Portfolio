@@ -49,15 +49,14 @@ export default function HeroSection() {
       <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-2">
         <div className="max-w-xl text-white space-y-6 text-center md:text-left order-last md:order-first">
           <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
-            Hello Buddy, I'm{" "}
+            Hello there, I'm{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
               Leela M
             </span>
             .
           </h1>
           <p className="text-lg">
-            An Aspiring Software Engineer and a Web developer with a passion for
-            creating unique products.
+            An Aspiring Software Engineer and a Web developer. Currently exploring gen-ai and agentic-ai.
           </p>
 
           <div className="flex space-x-6 justify-center md:justify-start pt-2">
