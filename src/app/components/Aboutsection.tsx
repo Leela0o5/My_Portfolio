@@ -44,7 +44,7 @@ export default function AboutPage() {
 
         <div className="mt-20">
           <h2 className="text-3xl font-bold text-center text-white mb-8">
-            My Skill<span className="text-yellow-400">s</span>
+            My <span className="text-yellow-400">Skills</span>
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
             {skills.map((skill) => (
@@ -60,8 +60,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-
-        <div className="mt-20">
+        {/* <div className="mt-20">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             My Journe<span className="text-yellow-400">y</span>
           </h2>
@@ -100,7 +99,7 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
