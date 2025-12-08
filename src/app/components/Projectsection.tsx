@@ -5,17 +5,6 @@ import Link from "next/link";
 
 const projectsData = [
   {
-    title: "AI Powered Car Control System",
-    status: "Under Development",
-    description:
-      "Developing an intelligent robotic car controlled by natural language commands via ChatGPT. The ESP32 manages Wi-Fi/API, while an Arduino handles motor and sensor control.",
-    tech: ["Arduino", "ESP32", "C/C++", "Python", "ChatGPT API", "Wi-Fi"],
-    links: {
-      github: "https://github.com/Leela0o5/AI-Powered-Car-Control-System",
-      demo: "",
-    },
-  },
-  {
     title: "Hex Launcher - Desktop Command Center",
     description:
       "Contributed to a desktop app that launches 25+ installed applications and streamlines 10+ system control functions (shutdown, restart) into one interface.",
@@ -26,7 +15,18 @@ const projectsData = [
     },
   },
   {
+        title: "Real-time Health Monitor System",
+        description:
+          "Developed a real-time health monitoring system using an embedded microcontroller to measure heart rate (BPM) and body temperature, with visual alerts on an LCD and LEDs for abnormal readings. It features adaptive threshold algorithms for accurate BPM detection and IR sensor-based finger detection.",
+        tech: ["STM32F4", "C", "LM35 Temperature Sensor", "Pulse Sensor", "I2C LCD", "GPIO", "ADC"],
+        links: {
+          github: "https://github.com/ManvithaDungi/Health-Monitor-System",
+          demo: "https://www.youtube.com/watch?v=foauO0uhHcA&list=LL&index=28",
+        },
+    },
+  {
     title: "EEG Data Analysis using ML",
+    status:"Completed",
     description:
       "A Streamlit web app to classify EEG signals and predict letters 'A' or 'B' from CSV data using a Support Vector Machine (SVM) model.",
     tech: ["Python", "Scikit-learn", "Pandas", "Streamlit", "SVM"],
