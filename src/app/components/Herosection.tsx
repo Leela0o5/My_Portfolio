@@ -33,11 +33,6 @@ export default function HeroSection() {
       href: "mailto:leela592023@gmail.com",
       icon: Mail,
     },
-    {
-      label: "Instagram",
-      href: "https://www.instagram.com/leenu_o05?igsh=MWZ6bHI2aXdnNGkyMw==",
-      icon: Instagram,
-    },
   ];
 
   return (
