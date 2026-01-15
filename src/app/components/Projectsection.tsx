@@ -5,6 +5,16 @@ import Link from "next/link";
 
 const projectsData = [
   {
+    title: "Dead Poets Society",
+    description:
+      "Developed a full-stack social platform for poetry enthusiasts using the MERN stack to write, share, and review poems. It features secure authentication with HTTP-only cookies, anonymous reviews for constructive feedback, and AI-powered critique to provide creative insights for writers.",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Passport.js", "Vercel"],
+    links: {
+      github: "https://github.com/Leela0o5/Dead-Poets-Society",
+      demo: "https://dead-poets-society-one.vercel.app/",
+    },
+},
+  {
     title: "Hex Launcher - Desktop Command Center",
     description:
       "Contributed to a desktop app that launches 25+ installed applications and streamlines 10+ system control functions (shutdown, restart) into one interface.",
