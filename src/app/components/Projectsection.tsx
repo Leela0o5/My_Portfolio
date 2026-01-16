@@ -42,7 +42,7 @@ const projectsData = [
     tech: ["Python", "Scikit-learn", "Pandas", "Streamlit", "SVM"],
     links: {
       github: "https://github.com/Leela0o5/EEG-Data-Analysis",
-      demo: "https://www.dropbox.com/scl/fi/tmra9tkcjtpy88efgobpt/Appdemo.mp4?rlkey=qrrvcf42yngf1xc3kx5ncsuae&st=koxbt5e3&dl=0", // 👈 ADD DEMO LINK
+      demo: "https://eeg-data-analysis.streamlit.app/",
     },
   },
   {
