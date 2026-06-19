@@ -57,6 +57,11 @@ I like building things from scratch — shipping small, fast, understandable cod
   Stack: MongoDB, Express.js, React, Node.js, JWT
   Features: Full-stack MERN poetry platform with JWT authentication and responsive content workflows.
 
+## Interests
+- Data structures, algorithms, and performance
+- AI/ML and System Design
+- Learning how things actually work
+
 ## Achievements
 - **Hackathon Finalist (Top 50)** -- Built an MCP-powered on-chain arbitrage system on BNB Chain using LangGraph for agentic decision-making. GitHub: https://github.com/Leela0o5/ArbiChain
 - **NPTEL Topper** -- Ranked topper in "Introduction to Machine Learning" (IIT Kharagpur).
