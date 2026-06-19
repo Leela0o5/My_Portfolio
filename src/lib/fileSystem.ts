@@ -75,7 +75,7 @@ LinkedIn: http://www.linkedin.com/in/leela-m-336334301
 LeetCode: https://leetcode.com/u/leela592023
 Codeforces: https://codeforces.com/profile/leela592023
 CodeChef: https://www.codechef.com/users/leela592023
-Portfolio: https://my-portfolio-nine-lyart-40.vercel.app/
+X (Twitter): https://x.com/@Leela679698
 `,
         },
       ],
